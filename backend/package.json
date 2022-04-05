@@ -1,0 +1,30 @@
+{
+  "name": "Eldorado Projeto Final",
+  "version": "1.0.0",
+  "description": "Eldorado Projeto Final",
+  "main": "./api/index.js",
+  "scripts": {
+    "start": "nodemon ./api/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emanueleborges/eldorado-projetofinal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emanueleborges/eldorado-projetofinal/issues"
+  },
+  "homepage": "https://github.com/emanueleborges/eldorado-projetofinal#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7",
+    "sequelize": "^6.17.0",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
