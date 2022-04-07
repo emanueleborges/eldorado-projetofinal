@@ -10,11 +10,14 @@ module.exports = {
       },
       Color: {
         allowNull: false,
-        type: Sequelize.STRING(16)
+        type: Sequelize.STRING(16), 
+
       },
       PartNumber: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        validate: { isNumeric: true, notNull : true, }, 
+
       },
       Category_fk: {
         allowNull: false,

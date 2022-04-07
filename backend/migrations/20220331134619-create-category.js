@@ -10,7 +10,11 @@ module.exports = {
       },
       Name: {
         allowNull: false,
-        type: Sequelize.STRING(125)
+        type: Sequelize.STRING(125),
+        validate: { isAlpha: true, notNull: true,}, 
+        unique: true,
+        validate: { notNull: true },
+
       },
     });
   },

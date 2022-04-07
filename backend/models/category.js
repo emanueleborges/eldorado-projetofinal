@@ -9,17 +9,29 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Category.hasMany(models.Device, {
         foreignKey: 'Category_fk'
-      })
+      });
     }
   }
   Category.init({
-    Name: DataTypes.STRING
-  }, {
+    Name: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty: {
+          msg: "Essse campo não pode ser nulo!" ,
+        },
+        len: {
+          args: [1, 128],
+          msg: "Essse campo deve ter entre 1 e 128 caracteres!" ,
+        },
+      }
+    }
+  },
+   {
     sequelize,
     modelName: 'Category',
     freezeTableName: true,
     createdAt: false,
-    updatedAt: false
+    updatedAt: false, 
   });
   return Category;
 };

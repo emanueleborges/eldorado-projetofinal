@@ -4,7 +4,11 @@
   "description": "Eldorado Projeto Final",
   "main": "./api/index.js",
   "scripts": {
-    "start": "nodemon ./api/index.js"
+    "start": "nodemon ./api/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "database": "npx sequelize-cli db:create",
+    "migrate": "npx sequelize-cli db:migrate",
+    "seed": "npx sequelize-cli db:seed:all"
   },
   "repository": {
     "type": "git",
@@ -25,6 +29,8 @@
     "sequelize-cli": "^6.4.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "swagger-autogen": "^2.20.8",
+    "swagger-ui-express": "^4.3.0"
   }
 }
