@@ -18,7 +18,6 @@ module.exports = app;
 /*
 https://imasters.com.br/banco-de-dados/tutorial-de-migrations-com-node-js-e-sequelize
 npm i
-
 npx sequelize-cli db:create
 npx sequelize-cli db:migrate
 */
