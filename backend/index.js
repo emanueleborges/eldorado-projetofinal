@@ -10,14 +10,14 @@ routes(app);
 
 const swaggerFile = require('./swagger_auto.json');
 app.use('/',  swaggerUi.serve,  swaggerUi.setup(swaggerFile));
-
-app.listen(port, () => console.log(`http://localhost:${port}`));
+app.use(express.json());
+app.listen(port, () => console.log('http://localhost:${port}'));
 
 module.exports = app;
 
 /*
 https://imasters.com.br/banco-de-dados/tutorial-de-migrations-com-node-js-e-sequelize
 npm i
-npx sequelize-cli db:create
-npx sequelize-cli db:migrate
+npx sequelize-cli db:create ou nmp database
+npx sequelize-cli db:migrate ou npm migrate
 */
