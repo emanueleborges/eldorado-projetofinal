@@ -1,17 +1,14 @@
 const express = require('express');
 const routes = require('./routes');
 const swaggerUi = require('swagger-ui-express');
-
-
-const app = express();
+const swaggerFile = require('./swagger_auto.json');
 const port = 3000;
 
+const app = express();
 routes(app);
-
-const swaggerFile = require('./swagger_auto.json');
 app.use('/',  swaggerUi.serve,  swaggerUi.setup(swaggerFile));
 app.use(express.json());
-app.listen(port, () => console.log('http://localhost:${port}'));
+app.listen(port, () => console.log(`http://localhost:${port}`));
 
 module.exports = app;
 
