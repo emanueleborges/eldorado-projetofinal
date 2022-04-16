@@ -20,4 +20,10 @@ https://imasters.com.br/banco-de-dados/tutorial-de-migrations-com-node-js-e-sequ
 npm i
 npx sequelize-cli db:create ou nmp database
 npx sequelize-cli db:migrate ou npm migrate
+
+npm install -g @angular/cli
+npx ng new frontend [y sass] 
+npx ng generate component componentes/lista  -- criiacao de componentes e ou servicos 
+npx ng generate services services/lista  -- criiacao de componentes e ou servicos 
+ng serve -- iniciar servidor
 */
