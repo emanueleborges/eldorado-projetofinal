@@ -2,19 +2,27 @@ const express = require('express');
 const routes = require('./routes');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('./swagger_auto.json');
+const bodyParser = require('body-parser')
+
 const port = 3000;
 
 const app = express();
 routes(app);
 app.use('/',  swaggerUi.serve,  swaggerUi.setup(swaggerFile));
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }))
 app.listen(port, () => console.log(`http://localhost:${port}`));
 
 module.exports = app;
 
 /*
-https://imasters.com.br/banco-de-dados/tutorial-de-migrations-com-node-js-e-sequelize
+    https://imasters.com.br/banco-de-dados/tutorial-de-migrations-com-node-js-e-sequelize
 npm i
+
+npx sequelize-cli migration:generate --name Create-Category
+npx sequelize-cli migration:generate --name Create-Device
+npx sequelize-cli migration:generate --name Create-User
+
 npx sequelize-cli db:create ou nmp database
 npx sequelize-cli db:migrate ou npm migrate
 

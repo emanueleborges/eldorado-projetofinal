@@ -3,13 +3,13 @@ const app = require('../index');
 
 describe('Test Api', () => {
 
-    it('GET /category', async ()=> {
+    it('GET /api/category 200', async ()=> {
         const response = await supertest(app)
         .get('/api/category');
         expect(response.statusCode).toBe(200);
     });
 
-    it('DELETE /category', async ()=> {
+    it('DELETE /api/category', async ()=> {
         const body = {
             Name: ""
         };
@@ -18,13 +18,13 @@ describe('Test Api', () => {
         expect(response.statusCode).toBe(200);
     });
 
-    it('GET /device', async ()=> {
+    it('GET /api/device', async ()=> {
         const response = await supertest(app).
         get('/api/device');
         expect(response.statusCode).toBe(200);
     });
     
-    it('DELETE /device', async ()=> {
+    it('DELETE /api/device', async ()=> {
         const body = {
             Name: ""
         };
