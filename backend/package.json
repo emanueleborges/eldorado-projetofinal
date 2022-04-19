@@ -4,7 +4,7 @@
   "description": "Eldorado Projeto Final",
   "main": "./api/index.js",
   "scripts": {
-    "start": "nodemon ./api/index.js",
+    "start": "nodemon ./api/index.js ",
     "test": "npx jest --coverage",
     "test2": "npx jest --watch",
     "database": "npx sequelize-cli db:create",

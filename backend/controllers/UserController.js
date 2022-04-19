@@ -2,7 +2,6 @@ const database = require('../models');
 const bcrypt    = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 require("dotenv").config();
-
 class UserController {
 
     /**
@@ -13,7 +12,7 @@ class UserController {
         try {
             const login_one = await database.User.findOne({ where: { Email: Email } });
             if (!login_one) {
-                return res.status(404).json(login_one);
+                return res.status(404).json({ message: 'User not found'});
             } else {
                 const authUser = await bcrypt.compare(Password, login_one.password);
 
@@ -27,8 +26,8 @@ class UserController {
                     email: authUser.email,
                     id: authUser.id
                 },
-                    'minhachave', {
-                    expiresIn: '1m'
+                    process.env.AUTH_SECRET, {
+                    expiresIn: process.env.AUTH_EXPIRESIN
                 });
                 return res.status(200).json({ token: token });
             }
@@ -45,13 +44,10 @@ class UserController {
         try
         {
             const login_one = await database.User.findOne({ where: { email: Email } });
-            if (login_one.length > 0) {
+            if (login_one) {
                 return res.status(201).json({
-                    message: "The E-mail already in use",
+                    message: "User already in use",
                 });
-            }
-            if (login_one != null) {
-                return res.status(409).json(login_one);
             } else {
                 const hashPass = await bcrypt.hash(Password, 10);
                 const insert_user = await database.User.create({ email: Email, password: hashPass });

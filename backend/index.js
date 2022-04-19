@@ -2,17 +2,16 @@ const express = require('express');
 const routes = require('./routes');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('./swagger_auto.json');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+require("dotenv").config();
 
-const port = 3000;
-
+const port = process.env.PORT || 3000;
 const app = express();
 routes(app);
 app.use('/',  swaggerUi.serve,  swaggerUi.setup(swaggerFile));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.listen(port, () => console.log(`http://localhost:${port}`));
-
 module.exports = app;
 
 /*

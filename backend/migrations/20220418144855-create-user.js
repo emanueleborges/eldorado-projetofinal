@@ -24,11 +24,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING(125),
         validate: { notNull: true },
-      },
-      User_fk: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references: { model: 'User', key: 'id' }
       }
 
     });

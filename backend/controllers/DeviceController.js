@@ -1,4 +1,4 @@
-const database = require('../models')
+const database = require('../models');
 
 class DeviceController {
 
@@ -43,7 +43,6 @@ class DeviceController {
      */
     static async delete_one(req, res) {
         const { id } = req.params;
-        console.log (id)
         try {
             const readone = await database.Device.destroy({where: { id: id }});
             return res.status(200).json(readone);

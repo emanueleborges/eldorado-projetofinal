@@ -7,12 +7,14 @@ class CategoryController {
      */
      static async insert(req, res) {
         const { Name } = req.body;
-        try {
-            const insert_one = await database.Category.create({ Name: Name });
-            return res.status(200).json(insert_one);
-        } catch (error) {
-            return res.status(500).json(error.message);
-        }
+        
+
+            try {
+                const insert_one = await database.Category.create({ Name: Name });
+                return res.status(200).json(insert_one);
+            } catch (error) {
+                return res.status(500).json(error.message);
+            }
     }
     /**
      * GET /category/:id
