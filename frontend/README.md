@@ -41,7 +41,7 @@ ng generate component device/list
 #
 https://getbootstrap.com/docs/5.1/forms/form-control/
 https://www.youtube.com/c/KevinDavilaDev/videos
-https://www.youtube.com/watch?v=vTtcuIZIvAA
+https://www.youtube.com/watch?v=vTtcuIZIvAA 55 minutos
 
 ng g c components/home --skipTests
 ng g c components/private --skipTests
@@ -49,3 +49,6 @@ ng g c components/admin --skipTests
 ng g c components/login --skipTests
 
 ng g s services/auth 
+ng g guard guards/auth
+
+npm i --save @auth0/angular-jwt
