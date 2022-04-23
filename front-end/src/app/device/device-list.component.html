@@ -1,0 +1,60 @@
+<div class="form-group">
+    <a [routerLink]="['/device/create']" class="btn btn-primary" >
+        Create Device
+    </a>
+</div>
+
+<br />
+
+<h2>Device List</h2>
+
+<div class="form-group row">
+    <label class="col-sm-2 col-form-label" ><strong>Filter By Category:</strong></label>
+
+    <div class="col-sm-5">
+        <select
+            [(ngModel)]='filter' class="form-control"
+            class="form-control"             
+        >
+            <option value='' >All</option>
+                <option
+                    *ngFor='let category of category'
+                >
+                    {{ category.name }}
+                </option>
+        </select>
+    </div>
+</div>
+
+<br />
+
+<table class="table table-striped" >
+    <thead class="border">
+        <tr>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Part Number</th>
+            <th>Category</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>        
+    </thead>
+    <tbody class="border">
+        <tr *ngFor='let device of filteredDevice'>
+            <td>{{ device.name }}</td>
+            <td>{{ device.color}}</td>
+            <td>{{ device.part_number }}</td>
+            <td>{{ device.category }}</td>
+            <td>
+                <a [routerLink]="['/device/update', device.id]" class="btn btn-primary" >
+                    Update
+                </a>
+            </td>
+            <td>
+                <button (click)="delete(device.id)" class="btn btn-danger" style="margin-top: auto;">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,9 @@
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email</label>
+  <input [(ngModel)]="user.email" type="email" class="form-control" placeholder="email@gmail.com">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Senha</label>
+  <input [(ngModel)]="user.password" type="password" class="form-control"  placeholder="123">
+</div>
+<button class="btn btn-primary" (click)="Login()">Login</button>
