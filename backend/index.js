@@ -32,8 +32,8 @@ npx sequelize-cli db:migrate ou npm migrate
 
 npm install -g @angular/cli
 npx ng new frontend [y sass] 
-npx ng generate component componentes/lista  -- criiacao de componentes e ou servicos 
-npx ng generate services services/lista  -- criiacao de componentes e ou servicos 
+npx ng generate component componentes/lista  -- criacao de componentes e ou servicos 
+npx ng generate services services/lista  -- criacao de componentes e ou servicos 
 ng serve -- iniciar servidor
 
 https://www.w3jar.com/node-js-login-registration-rest-api-mysql-db/

@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       validate: {
         notEmpty: {
-          msg: "Essse campo n„o pode ser nulo!" ,
+          msg: "Essse campo n√£o pode ser nulo!" ,
         },
         len: {
           args: [1, 16],
@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
        
         notEmpty: {
-          msg: "Essse campo n„o pode ser nulo!" ,
+          msg: "Essse campo n√£o pode ser nulo!" ,
         },
         len: {
           args: [1, 16],
