@@ -25,3 +25,30 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+ng generate service services/category
+ng generate component category/create
+ng generate component category/details
+ng generate component category/list
+
+
+ng generate service services/device
+ng generate component device/create
+ng generate component device/details
+ng generate component device/list
+
+#
+https://getbootstrap.com/docs/5.1/forms/form-control/
+https://www.youtube.com/c/KevinDavilaDev/videos
+https://www.youtube.com/watch?v=vTtcuIZIvAA 55 minutos
+
+ng g c components/home --skipTests
+ng g c components/private --skipTests
+ng g c components/admin --skipTests
+ng g c components/login --skipTests
+
+ng g s services/auth 
+ng g guard guards/auth
+
+npm i --save @auth0/angular-jwt
