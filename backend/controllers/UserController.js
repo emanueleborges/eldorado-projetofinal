@@ -21,13 +21,13 @@ class UserController {
                     message: "Incorrect password",
                     });
                 }
-
                 const token = jwt.sign({
                     email: authUser.email,
                     id: authUser.id
                 },
                     process.env.AUTH_SECRET, {
-                    expiresIn: process.env.AUTH_EXPIRESIN
+                    expiresIn: process.env.AUTH_EXPIRESIN,
+                    
                 });
                 return res.status(200).json({ token: token });
             }
