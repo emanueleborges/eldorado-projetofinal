@@ -8,12 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   user = {
     Email: 'email@gmail.com',
     Password: '123'
   }
-
   constructor(
     private authService: AuthService,
     private router: Router
@@ -22,15 +20,13 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   Login() {
-    console.log(this.user.Email, this.user.Password)
     this.authService.singin(this.user).subscribe(
       (res:any) => {
-        console.log(res);
         localStorage.setItem('token', res.token);
-        this.router.navigate(['private']);
+          this.router.navigate(['home']);
       }
     )
-
   }
+
 
 }

@@ -1,25 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CreateComponent } from './components/create/create.component';
-import { DetailsComponent } from './components/details/details.component';
-import { ListComponent } from './components/list/list.component';
-
 import { HomeComponent } from './components/home/home.component';
-import { PrivateComponent } from './components/private/private.component';
-import { AdminComponent } from './components/admin/admin.component';
+import { CategoryComponent } from './components/category/category.component';
+import { DeviceComponent } from './components/device/device.component';
+
 import { LoginComponent } from './components/login/login.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'private', component: PrivateComponent },
-  { path: 'admin', component: AdminComponent },
+  { path: 'category', component: CategoryComponent , canActivate: [AuthGuard]},
+  { path: 'device', component: DeviceComponent , canActivate: [AuthGuard]},
   { path: 'login', component: LoginComponent },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
-
-
-  { path: 'category', component: ListComponent },
-  { path: 'category/:id', component: DetailsComponent },
-  { path: 'add', component: CreateComponent }
 ];
 
 @NgModule({

@@ -1,0 +1,37 @@
+<div class="form-group row">
+  <div class="col-sm-12">
+      <a [routerLink]="['/category/create']" class="btn btn-primary" >
+          Create Category
+      </a>
+  </div>
+</div>
+
+<br />
+
+<h2>Category List</h2>
+
+<table class="table table-striped">
+  <thead class="border">
+      <tr>
+          <th>Name</th>
+          <th>Update</th>
+          <th>Delete</th>
+      </tr>
+  </thead>
+  <tbody class="border">
+      <tr *ngFor='let category of category'>
+          <td>{{ category.Name }}</td>
+          <td>
+              <a [routerLink]="['/category', category.id]" class="btn btn-primary" >
+                  Update
+              </a>
+          </td>
+          <td><!--
+              <button (click)="delete(category.id)" class="btn btn-danger" style="margin-top: auto;">
+                  Delete
+              </button>
+            -->
+          </td>
+      </tr>
+  </tbody>
+</table>
