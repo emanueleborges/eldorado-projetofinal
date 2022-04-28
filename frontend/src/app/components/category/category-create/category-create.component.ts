@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryService} from '../../services/category.service';
-import { CategoryResponse, CategoryRequest } from '../category/category';
+import { CategoryService} from '../../../services/category.service';
+import { CategoryResponse, CategoryRequest } from '../../category/category';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,10 +14,6 @@ export class CategoryCreateComponent implements OnInit {
     Name : ''
   }
 
-  response : CategoryResponse = {
-    id : '',
-    Name : ''
-  }
 
   constructor(
     private categoryService :  CategoryService,
@@ -33,8 +29,11 @@ export class CategoryCreateComponent implements OnInit {
     );
     alert('criado com sucesso')
     this.router.navigate(['category']);
-
-
   }
+  
+  Cancel(): void {
+    this.router.navigate(['category']);
+  }
+
 
 }

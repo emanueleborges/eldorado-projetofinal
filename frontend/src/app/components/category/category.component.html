@@ -1,8 +1,6 @@
 <div class="form-group row">
   <div class="col-sm-12">
-      <a [routerLink]="['/category/create']" class="btn btn-success "  >
-          Novo
-      </a>
+      <a [routerLink]="['/category/create']" class="btn btn-success ">Novo</a>
   </div>
 </div>
 
@@ -15,21 +13,15 @@
       <tr>
         <th>Id</th>
         <th>Name</th>
-        <th>Update</th>
-          <th>Delete</th>
+        <th>Delete</th>
       </tr>
   </thead>
   <tbody class="border">
-      <tr *ngFor='let category of category'>
-          <td>{{ category.id }}</td>
-          <td>{{ category.Name }}</td>
+      <tr *ngFor='let categorias of category'>
+          <td>{{ categorias.id }}</td>
+          <td>{{ categorias.Name }}</td>
           <td>
-              <button  [routerLink]="['/category']" class="btn btn-primary">Update</button>
-          </td>
-          <td>
-            <a [routerLink]="['/category/create']" class="btn btn-danger "  >
-            Delete
-          </a>
+              <button  class="btn btn-danger" (click)="Delete(categorias.id)">Delete</button>
           </td>
       </tr>
   </tbody>

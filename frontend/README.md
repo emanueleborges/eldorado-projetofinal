@@ -54,9 +54,11 @@ npm i --save @auth0/angular-jwt
 ng g guard guards/role --skipTests
 npm i --save jwt-decode
 
-ng g c components/category/list --skipTests
-ng g c components/category/caategory-create --skipTests
+ng g c components/category --skipTests
+ng g c components/category/category-create --skipTests
+ng g c components/category/category-delete --skipTests
+ng g c components/category/category-update --skipTests
 
+https://www.youtube.com/watch?v=bOoddUeklZY login
 https://www.youtube.com/watch?v=mUYxbaBChh0 create
-
-https://www.youtube.com/watch?v=bOoddUeklZY update
+https://www.youtube.com/watch?v=6pGVGv3TuCk update

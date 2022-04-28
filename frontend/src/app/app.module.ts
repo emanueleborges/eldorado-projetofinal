@@ -8,9 +8,11 @@ import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+
 import { CategoryComponent } from './components/category/category.component';
+import { CategoryCreateComponent } from './components/category/category-create/category-create.component';
+
 import { DeviceComponent } from './components/device/device.component';
-import { CategoryCreateComponent } from './components/category-create/category-create.component';
 
 @NgModule({
   declarations: [
