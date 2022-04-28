@@ -6,25 +6,24 @@ import { JwtHelperService } from '@auth0/angular-jwt';
   providedIn: 'root'
 })
 export class AuthService {
+
+
   private url = 'http://localhost:3000';
   constructor(
     private http: HttpClient,
-    private jwtHelper: JwtHelperService
+    private jwtHelper: JwtHelperService,
     ) { }
   singin(user: any) {
     return this.http.post(`${this.url}/api/user/login`, user)
   }
   isAuth(): boolean{
     const token = localStorage.getItem('token');
-    //if (this.jwtHelper.isTokenExpired('token') || !localStorage.getItem('token')) {
+    //if (this.jwtHelper.isTokenExpired(token) || !localStorage.getItem('token')) {
     if ( !localStorage.getItem('token')) {
         return false;
     }
     return true;
   }
 
-  signoff(){
-
-  }
 
 }
