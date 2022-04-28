@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService} from '../../services/category.service';
-import { Category } from '../category/category';
+import { CategoryResponse } from '../category/category';
 
 @Component({
   selector: 'app-category',
@@ -9,19 +9,40 @@ import { Category } from '../category/category';
 })
 export class CategoryComponent implements OnInit {
 
-  public category: Category[] = [];
+  public category: CategoryResponse[] = [];
+
 
   constructor(private categoryService: CategoryService) {};
 
   ngOnInit(): void {
-    this.retrieveAll();
+    this.ListAll();
   }
 
-  retrieveAll(): void{
-    this.categoryService.retrieveAll().subscribe({
+  ListAll(): void{
+    this.categoryService.getCategorias().subscribe({
       next: category => {
           this.category = category;
       },
       error: ({ error }) => console.log(`${error}`),
-  });  }
+    });
+  }
+
+
+  /*
+  Save(): void {
+    const data = {
+      Name: 'this.category.Name',
+    };
+
+    this.categoryService.save(data).subscribe(
+      (res) => {
+        console.log(res);
+
+      }
+    );
+  }
+*/
+
+
+
 }

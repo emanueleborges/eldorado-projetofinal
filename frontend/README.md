@@ -55,3 +55,8 @@ ng g guard guards/role --skipTests
 npm i --save jwt-decode
 
 ng g c components/category/list --skipTests
+ng g c components/category/caategory-create --skipTests
+
+https://www.youtube.com/watch?v=mUYxbaBChh0 create
+
+https://www.youtube.com/watch?v=bOoddUeklZY update

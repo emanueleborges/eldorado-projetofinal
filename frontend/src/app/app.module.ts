@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { CategoryComponent } from './components/category/category.component';
 import { DeviceComponent } from './components/device/device.component';
+import { CategoryCreateComponent } from './components/category-create/category-create.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DeviceComponent } from './components/device/device.component';
     HomeComponent,
     LoginComponent,
     CategoryComponent,
-    DeviceComponent
+    DeviceComponent,
+    CategoryCreateComponent,
   ],
   imports: [
     BrowserModule,
