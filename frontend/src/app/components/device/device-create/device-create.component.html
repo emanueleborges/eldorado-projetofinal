@@ -13,7 +13,9 @@
 
     <div class="form-group">
       <label for="usr">Category_fk:</label>
-      <input type="text" class="form-control" id="Category_fk" [(ngModel)]="request.Category_fk">
+      <select type="text" class="form-select" id="Category_fk" [(ngModel)]="request.Category_fk">
+        <option *ngFor="let categorias of category" value= {{categorias.id}}> {{categorias.Name}} </option>
+      </select>
     </div>
 
     <div class="form-group text-right">
