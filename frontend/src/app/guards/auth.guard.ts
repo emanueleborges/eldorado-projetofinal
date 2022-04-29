@@ -13,7 +13,7 @@ export class AuthGuard implements CanActivate {
   ) {  }
   canActivate(): boolean {
     if(!this.authService.isAuth()){
-      console.log('Usuario no autorizado para la vista');
+      console.log('Usuario sem Autorization');
 
       this.router.navigate(['login']);
       return false;

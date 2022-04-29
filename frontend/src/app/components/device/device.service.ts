@@ -1,33 +1,31 @@
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from "rxjs";
-import { Device } from "./device";
+import { DeviceResponse, DeviceRequest , DeviceId} from '../device/device';
 
 @Injectable({
     providedIn: 'root'
 })
 export class DeviceService {
 
-    private baseUrl = 'http://localhost:3000/api/device';
+    private url = 'http://localhost:3000/api/device';
 
     constructor(private httpClient: HttpClient) {};
 
-    public retrieveAll(): Observable<Device[]> {
-        return this.httpClient.get<Device[]>(this.baseUrl);
-    }
-    public save(device: Device): Observable<Device> {
-        const object = { name: device.name, color: device.color,
-            part_number: device.part_number, id_category: Number(device.id_category) };
-
-        if (device.id) {
-            return this.httpClient.put<Device>(`${this.baseUrl}/update/${device.id}`, object);
-        } else {
-            return this.httpClient.post<Device>(`${this.baseUrl}/create`, object);
-        }
+    public getDevices(): Observable<DeviceResponse[]> {
+      return this.httpClient.get<DeviceResponse[]>(this.url);
     }
 
-    public deleteById(id: number): Observable<any> {
-        return this.httpClient.delete<any>(`${this.baseUrl}/delete/${id}`);
+    public postDevice(request: DeviceRequest): Observable<DeviceRequest> {
+      return this.httpClient.post<DeviceRequest>(`${this.url}`, request);
+    }
+
+    public getDevice(id: string ): Observable<DeviceId> {
+      return this.httpClient.get<DeviceId>(`${this.url}/${id}`);
+    }
+
+    public deleteDevice(id: string ): Observable<DeviceId>  {
+      return this.httpClient.delete<DeviceId>(`${this.url}/${id}`);
     }
 
 }

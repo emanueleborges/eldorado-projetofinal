@@ -13,6 +13,8 @@ import { CategoryComponent } from './components/category/category.component';
 import { CategoryCreateComponent } from './components/category/category-create/category-create.component';
 
 import { DeviceComponent } from './components/device/device.component';
+import { DeviceCreateComponent } from './components/device/device-create/device-create.component';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { DeviceComponent } from './components/device/device.component';
     CategoryComponent,
     DeviceComponent,
     CategoryCreateComponent,
+    DeviceCreateComponent,
   ],
   imports: [
     BrowserModule,

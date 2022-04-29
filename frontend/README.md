@@ -34,7 +34,7 @@ ng generate component category/list
 
 
 ng generate service services/device
-ng generate component device/create
+ng generate component components/device/create
 ng generate component device/details
 ng generate component device/list
 

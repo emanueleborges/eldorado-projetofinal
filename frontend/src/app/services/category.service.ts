@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {  Observable } from "rxjs";
+import { Observable } from "rxjs";
 import { CategoryResponse, CategoryRequest , CategoryId} from '../components/category/category';
 
 @Injectable({
@@ -12,7 +12,7 @@ export class CategoryService {
 
     constructor(
       private httpClient: HttpClient
-      ) {};
+    ) {};
 
     public getCategorias(): Observable<CategoryResponse[]> {
       return this.httpClient.get<CategoryResponse[]>(this.url);
@@ -29,6 +29,4 @@ export class CategoryService {
     public deleteCategory(id: string ): Observable<CategoryId>  {
       return this.httpClient.delete<CategoryId>(`${this.url}/${id}`);
     }
-
-
 }

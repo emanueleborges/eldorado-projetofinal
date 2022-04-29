@@ -1,8 +1,15 @@
-export class Device {
+export class DeviceResponse {
+  public id!: string;
+  public Color!: string;
+  public PartNumber!: string;
+  public Category_fk!: string;
+}
 
-    public id!: number;
-    public name!: string;
-    public color!: string;
-    public part_number!: number;
-    public id_category!: number;
+export class DeviceRequest {
+  public Color!: string;
+  public PartNumber!: string;
+  public Category_fk!: string;
+}
+export class DeviceId {
+  public id!: string;
 }
