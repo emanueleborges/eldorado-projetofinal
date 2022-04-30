@@ -42,4 +42,8 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  Logoff(){
+    alert ('logoff');
+    localStorage.removeItem('token');
+  }
 }
