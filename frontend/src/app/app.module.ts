@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 
 import { HomeComponent } from './components/home/home.component';
@@ -15,7 +16,6 @@ import { CategoryCreateComponent } from './components/category/category-create/c
 import { DeviceComponent } from './components/device/device.component';
 import { DeviceCreateComponent } from './components/device/device-create/device-create.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,12 +25,13 @@ import { DeviceCreateComponent } from './components/device/device-create/device-
     DeviceComponent,
     CategoryCreateComponent,
     DeviceCreateComponent,
+       
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },

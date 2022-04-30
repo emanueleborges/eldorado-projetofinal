@@ -62,3 +62,6 @@ ng g c components/category/category-update --skipTests
 https://www.youtube.com/watch?v=bOoddUeklZY login
 https://www.youtube.com/watch?v=mUYxbaBChh0 create
 https://www.youtube.com/watch?v=6pGVGv3TuCk update
+
+https://warcontent.com/angular-interceptor/
+npx ng g interceptor token
