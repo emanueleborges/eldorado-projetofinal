@@ -31,8 +31,7 @@ class UserController {
                 });
                 //return res.status(200).json({ token: token });
 
-                return  res.header("auth-token", token).send({token: token});
-
+                return  res.header("token", token).send({token: token});
             }
         } catch (error) {
             return res.status(500).json(error.message);
