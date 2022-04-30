@@ -25,4 +25,8 @@ export class AuthService {
     return true;
   }
 
+  register_user(user: any) {
+    return this.http.post(`${this.url}/api/user/cadastro`, user)
+  }
+
 }

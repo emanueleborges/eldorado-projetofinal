@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
   user = {
     Email: 'email@gmail.com',
@@ -28,5 +29,17 @@ export class LoginComponent implements OnInit {
     )
   }
 
+  Register (){
+    this.authService.register_user(this.user).subscribe({
+      next: resp => {
+        if (!resp){
+          alert('Usuario cadastrado com sucesso')
+        }   else {
+          alert('Já existe usuário '+ this.user.Email + ' cadastrado!!')
+        }
+      },
+      error: ({ error }) => console.log(`${error}`),
+    });
+  }
 
 }
