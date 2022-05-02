@@ -1,11 +1,17 @@
-<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email</label>
-  <input [(ngModel)]="user.Email" type="email" class="form-control" placeholder="email@gmail.com">
+<div class="container">
+  <div class="row">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Email</label>
+      <input [(ngModel)]="user.Email" type="email" class="form-control" placeholder="email@gmail.com">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Senha</label>
+      <input [(ngModel)]="user.Password" type="password" class="form-control"  placeholder="123">
+    </div>
+    </div>
+    <div class="d-flex justify-content-around">
+        <button class="btn btn-primary" (click)="Login()">Login</button>
+        <button class="btn btn-primary" (click)="Register()">Register</button>
+        <button class="btn btn-primary" (click)="Logoff()">Logoff</button>
+      </div>
 </div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Senha</label>
-  <input [(ngModel)]="user.Password" type="password" class="form-control"  placeholder="123">
-</div>
-<button class="btn btn-primary" (click)="Login()">Login</button>
-<button class="btn btn-primary" (click)="Register()">Register</button>
-<button class="btn btn-primary" (click)="Logoff()">Logoff</button>
