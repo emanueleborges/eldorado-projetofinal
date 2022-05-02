@@ -15,7 +15,6 @@ class UserController {
                 return res.status(404).json({ message: 'User not found'});
             } else {
                 const authUser = await bcrypt.compare(Password, login_one.password);
-
                 if(!authUser){
                 return res.status(422).json({
                     message: "Incorrect password",
