@@ -20,11 +20,14 @@ class DeviceController {
     static async read(req, res) {
         try {
             const read = await database.Device.findAll({
+                include: {
+                    model: database.Category,
+                },
                 order: [
                   ["id", "DESC"],
                 ],
               });
-            return res.status(200).json(read);
+              return res.status(200).json(read);
         } catch (error) {
             return res.status(500).json(error.message);
         }

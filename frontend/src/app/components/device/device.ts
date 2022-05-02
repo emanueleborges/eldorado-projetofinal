@@ -3,6 +3,8 @@ export class DeviceResponse {
   public Color!: string;
   public PartNumber!: string;
   public Category_fk!: string;
+  public NameCategory!: string;
+  
 }
 
 export class DeviceRequest {

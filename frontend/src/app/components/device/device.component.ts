@@ -24,6 +24,7 @@ export class DeviceComponent implements OnInit {
     this.deviceService.getDevices().subscribe({
       next: device => {
           this.device = device;
+          console.log('Dados Array ->', JSON.parse(JSON.stringify(this.device)));
       },
       error: ({ error }) => console.log(`${error}`),
     });

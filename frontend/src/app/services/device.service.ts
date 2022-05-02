@@ -29,6 +29,4 @@ export class DeviceService {
     public deleteDevice(id: string ): Observable<DeviceId>  {
       return this.httpClient.delete<DeviceId>(`${this.url}/${id}`);
     }
-
-
 }
