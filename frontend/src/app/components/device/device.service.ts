@@ -8,7 +8,7 @@ import { DeviceResponse, DeviceRequest , DeviceId} from '../device/device';
 })
 export class DeviceService {
 
-    private url = 'http://localhost:3000/api/device';
+    private url = 'http://app-eldorado.herokuapp.com/api/device';
 
     constructor(private httpClient: HttpClient) {};
 

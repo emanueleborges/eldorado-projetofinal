@@ -25,7 +25,6 @@ module.exports = {
         type: Sequelize.STRING(125),
         validate: { notNull: true },
       }
-
     });
   },
 

@@ -4,7 +4,6 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Device extends Model {
-   
     static associate(models) {
       // define association here
       Device.belongsTo(models.Category, {

@@ -14,7 +14,6 @@ module.exports = {
         validate: { isAlpha: true, notNull: true,}, 
         unique: true,
         validate: { notNull: true },
-
       },
     });
   },

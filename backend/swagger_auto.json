@@ -1,3 +1,4 @@
+
 {
   "swagger": "2.0",
   "info": {
@@ -5,7 +6,7 @@
     "title": "REST API",
     "description": ""
   },
-  "host": "localhost:3000",
+  "host": "app-eldorado.herokuapp.com",
   "basePath": "/",
   "components": {
     "securityDefinitions": {

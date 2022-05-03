@@ -17,7 +17,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER,
         validate: { isNumeric: true, notNull : true, }, 
-
       },
       Category_fk: {
         allowNull: false,

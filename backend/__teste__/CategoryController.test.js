@@ -1,6 +1,5 @@
 const supertest = require('supertest');
 const app = require('../index');
-
 describe('Test Api', () => {
 
     it('GET /api/category 200', async ()=> {

@@ -8,7 +8,7 @@ import { CategoryResponse, CategoryRequest , CategoryId} from '../components/cat
 })
 export class CategoryService {
 
-    private url = 'http://localhost:3000/api/category';
+    private url = 'http://app-eldorado.herokuapp.com/api/category';
 
     constructor(
       private httpClient: HttpClient

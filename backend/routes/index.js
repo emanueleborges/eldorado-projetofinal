@@ -4,12 +4,10 @@ const device = require('./deviceRoute');
 const user = require('./userRoute');
 const cors = require('cors');
 
-
 // rodar swagger
 //app.use(category);
 //app.use(device);
 //app.use(user);
-
 
 module.exports = app => {
   app.use(

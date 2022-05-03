@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'device', component: DeviceComponent , canActivate: [AuthGuard]},
   { path: 'device/create', component: DeviceCreateComponent , canActivate: [AuthGuard]},
   { path: 'login', component: LoginComponent },
-  { path: '**', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'login', pathMatch: 'full' },
 ];
 
 @NgModule({

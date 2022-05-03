@@ -17,7 +17,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(port, () => console.log(`http://localhost:${port}`));
 
 module.exports = app;
-
 /*
     https://imasters.com.br/banco-de-dados/tutorial-de-migrations-com-node-js-e-sequelize
 npm i
