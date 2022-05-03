@@ -1,6 +1,6 @@
 Eldorado Tech Training 2º edição
 
-Backend: Node js, Sequelize, Jwt, Token, Swagger  
+Backend: Node 
 http://app-eldorado.herokuapp.com/
 
 
@@ -11,7 +11,9 @@ http://eldorado-angular.herokuapp.com/
 GitHub: Projeto Final Eldorado
 https://github.com/emanueleborges/eldorado-projetofinal
 
+
 Desafio Final
+
 
 Você deve implementar um aplicativo web de gerenciamento de dispositivos
 simples.
